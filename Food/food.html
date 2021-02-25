@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="./css/food.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font.css" />
+		<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_2309334_07d7k5x85e2j.css"/>
+		<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_2309334_07d7k5x85e2j.css"/>
+		<script src="./js/jquery-3.5.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		
+		<header id="header" class="">
+			
+			<div class="grid header__content">
+				<nav class="grid-cell-3 header-nav">
+					<ul class="grid">
+						<li class="grid-cell-1 header-nav__item">
+							<a href="index.html" class="header-nav__link">
+								<!-- <span class="icon icon-home" title="商店"></span> -->
+								<span class="header-nav__link--hidden">首页</span>
+							</a>
+						</li>
+						<li class="grid-cell-1 header-nav__item">
+							<a href="recipe.html" class="header-nav__link">
+								<!-- <span class="icon icon-vcard" title="关于"></span> -->
+								<span class="header-nav__link--hidden">菜谱</span>
+							</a>
+						</li>
+						<li class="grid-cell-1 header-nav__item">
+							<a href="" class="header-nav__link">
+								<!-- <span class="icon icon-conversation" title="社区"></span> -->
+								<span class="header-nav__link--hidden">食材</span>
+							</a>
+						</li>
+						
+					</ul>
+				</nav>
+				<div class="grid-cell-1 header-toolbar">
+					<a class="header-toolbar__item" href="login.html">
+						<span class="icon icon-user" title="登录"></span>登录
+					</a>
+					<a class="header-toolbar__item" href="#">
+						<span class="icon icon-search" title="搜索"></span>注册
+					</a>
+				</div>
+
+			</div>
+		</header>
+
+		<section id="content">
+			<div class="grid-1">
+				<div class="banner">
+					<div class="nav">
+						<ul class="ul">
+							<li class="left">
+								<div class="option">
+
+									<img src="images/QQ截图20210108132657.png">
+
+								</div>
+							</li>
+							<li class="middle">
+								<ul>
+									<li><a href="index.html">首页</a></li>
+									<li><a href="recipe.html">菜单</a></li>
+									<li><a href="food.html">食材</a></li>
+								</ul>
+							</li>
+							<li class="right">
+								<form action="#" method="post" name="mysearch">
+									<input type="text" name="" id="" value="" />
+
+								</form>
+							</li>
+						</ul>
+					</div>
+						<div class="nav_top">
+						<div class="nav_top_left">
+							<i class="icon-lingxing iconfont" style="font-size:35px;"></i>
+							<ul>
+								<li><a href="">首页</a></li>
+								<li><a href="">热菜</a></li>
+								<li><a href="">凉菜</a></li>
+								<li><a href="">汤羹</a></li>
+								<li><a href="">主食</a></li>
+								<li><a href="">小吃</a></li>
+								<li><a href="">西餐</a></li>
+								<li><a href="">烘焙</a></li>
+								<li><a href="">饮品</a></li>
+								<li><a href="">零食</a></li>
+								<li><a href="">泡酱蔬菜</a></li>
+								<li><a href="">自制食材</a></li>
+								<li><a href="">最新菜谱</a></li>
+							</ul>
+						</div>
+						<div class="nav_top_right">
+							<a href="">浏览全部
+								<i class="icon-arrow-down iconfont"></i>
+							</a>
+							<!-- <div class="nav_top_right_none">
+								<ul class="ul_left">
+									<h2>主食</h2>
+									<li><a href="">米饭</a></li>
+									<li><a href="">包子</a></li>
+									<li><a href="">馒头花卷</a></li>
+								</ul>
+								<ul class="ul_right">
+									<h2>主食</h2>
+									<li><a href="">米饭</a></li>
+									<li><a href="">包子</a></li>
+									<li><a href="">馒头花卷</a></li>
+								</ul>
+								
+							</div> -->
+						</div>
+					</div>
+					
+					<div class="grid banner__content">
+						<img src="./images/6.jpg" >
+					</div>
+				</div>
+				<div class="table">
+					<table border="1" bordercolor="lightgrey " cellspacing="0" cellpadding="0">
+						<tr>
+							<td rowspan="3" colspan="1" style="background-color: #F8F8F8;font-size: 25px;color: #666;">时令与热门</td>
+							<td>鸡肉</td>
+							<td>鸡翅</td>
+							<td>鸡蛋</td>
+							<td>牛肉</td>
+							<td>猪肉</td>
+							<td>排骨</td>
+						</tr>
+						<tr>
+							<td>小龙虾</td>
+							<td>皮皮虾</td>
+							<td>螃蟹</td>
+							<td>虾</td>
+							<td>扇贝</td>
+							<td>生蚝</td>
+						</tr>
+						<tr>
+							<td>黄瓜</td>
+							<td>茄子</td>
+							<td>西红柿</td>
+							<td>土豆</td>
+							<td>黑木耳</td>
+							<td>秋葵</td>
+						</tr>
+					</table>
+					
+				</div>
+				<div class="table">
+					<table border="1" bordercolor="lightgrey " cellspacing="0" cellpadding="0">
+						<tr>
+							<td rowspan="5" colspan="1"style="background-color: #F8F8F8;font-size: 25px;color: #666;">禽兽品类</td>
+							<td>猪肉</td>
+							<td>排骨</td>
+							<td>里脊</td>
+							<td>猪蹄</td>
+							<td>五花肉</td>
+							<td>肋骨</td>
+							<td>肋骨</td>
+						</tr>
+						<tr>
+							<td>牛肉</td>
+							<td>牛排</td>
+							<td>肥牛</td>
+							<td>羊肉</td>
+							<td>猪肝</td>
+							<td>肋骨</td>
+							<td>猪肘</td>
+						</tr>
+						<tr>
+							<td>火腿</td>
+							<td>香肠</td>
+							<td>培根</td>
+							<td>肋骨</td>
+							<td>腊肉</td>
+							<td>肉松</td>
+							<td>整鸡</td>
+						</tr>
+						<tr>
+							<td>鸡肉</td>
+							<td>鸡翅</td>
+							<td>鸡腿</td>
+							<td>乌鸡</td>
+							<td>鸭肉</td>
+							<td>乳鸽</td>
+							<td>更多</td>
+						</tr>
+						<tr>
+							<td>鸡蛋</td>
+							<td>鸭蛋</td>
+							<td>鸭脖</td>
+							<td>鹅肝</td>
+							<td>鹌鹑</td>
+							<td>更多</td>
+							<td>更多</td>
+						</tr>
+					</table>
+					
+				</div>
+				<div class="table2">
+					<table border="1" bordercolor="lightgrey " cellspacing="0" cellpadding="0">
+						<tr>
+							<td rowspan="3" colspan="1" style="background-color: #F8F8F8;font-size: 25px;color: #666;">水产品类</td>
+							<td>罗非鱼</td>
+							<td>鲤鱼</td>
+							<td>鲫鱼</td>
+							<td>带鱼</td>
+							<td>鲈鱼</td>
+							<td>黄花鱼</td>
+						</tr>
+						<tr>
+							<td>小龙虾</td>
+							<td>虾</td>
+							<td>螃蟹</td>
+							<td>龙虾</td>
+							<td>大闸蟹</td>
+							<td>皮皮虾</td>
+						</tr>
+						<tr>
+							<td>牡蛎</td>
+							<td>扇贝</td>
+							<td>生蚝</td>
+							<td>哈利</td>
+							<td>鲍鱼</td>
+							<td>鲤鱼</td>
+						</tr>
+					</table>
+					
+				</div>
+				<div class="table2">
+					<table border="1" bordercolor="lightgrey " cellspacing="0" cellpadding="0">
+						<tr>
+							<td rowspan="3" colspan="1" style="background-color: #F8F8F8;font-size:25px;color: #666;">蔬菜品类</td>
+							<td>白菜</td>
+							<td>油菜</td>
+							<td>青菜</td>
+							<td>芹菜</td>
+							<td>菠菜</td>
+							<td>韭菜</td>
+						</tr>
+						<tr>
+							<td>大白菜</td>
+							<td>娃娃菜</td>
+							<td>芦蒿</td>
+							<td>莴笋</td>
+							<td>油麦菜</td>
+							<td>芦笋</td>
+						</tr>
+						<tr>
+							<td>土豆</td>
+							<td>红薯</td>
+							<td>芋头</td>
+							<td>洋葱</td>
+							<td>萝卜</td>
+							<td>山药</td>
+						</tr>
+					</table>
+					
+				</div>
+				<div id="main" style="width: 100%;height:500px;margin:60px 0px auto;"></div>
+			</div>
+		</section>
+		<div class="footer">
+			<div class="footer_top">
+				<div class="footer_top_left">
+					<p><a href="">美食天下-让吃更美好!</a></p>
+					<span><a href="">加入我们</a></span>
+					<span><a href="">联系我们</a></span>
+					<span><a href="">加入我们</a></span>
+					<span><a href="">服务声明</a></span>
+					<span><a href="">友情链接</a></span>
+					<span><a href="">网站地图</a></span>
+					<span><a href="">移动应用</a></span>
+					
+				</div>
+				<div class="footer_top_right">
+					<ul>
+						<li><a href=""><img src="images/msc_app.png" width="80"></a></li>
+						<li><a href=""><img src="images/weixin_727.png" width="80"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer_middle">
+				<p>友情链接：
+				<span>愉悦妈妈</span>
+				<span>自游乐</span>
+				<span>爱奇艺生活</span>
+				<span>中华美食网</span>
+				<span>太平洋亲子网</span>
+				<span>美食杰</span>
+				<span>红餐网</span>
+				<span>妈妈网</span>
+				<span>亲宝网</span>
+				<span>6296网址大全</span>
+				<span>中国地图</span>
+				<span>三九养生堂</span>
+				<span>饭菜网</span>
+				<span>波奇网</span>
+				<span>慧聪网</span><br>
+				<span>企业服务平台</span>
+				<span>农经网</span>
+				<span>885财经</span>
+				<span>餐饮杰</span>
+				</p>
+				
+			</div>
+			<div class="footer_bottom">
+				<p>版权所有 © 2004-2020 美食天下 保留所有权利 - 京公网安备 11010502031041号 / 京ICP证090244号 / 京ICP备10020153号</p>
+			
+				<i class="icon-huidaodingbu iconfont goTop" style="font-size:60px; color: rgba(0,0,0,0.8);"></i>
+			</div>
+			
+			
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				var timer;
+				var cur = 0;
+				var len = $(".ads li").length;
+		
+				function showImg() {
+					timer = setInterval(function() {
+						cur++;
+						if (cur >= len) {
+							cur = 0;
+						}
+						$(".ads img").eq(cur).fadeIn(2000).siblings("img").fadeOut(2000);
+						$(".ads li").eq(cur).addClass("active").siblings("li").removeClass("active");
+					}, 2000)
+				}
+				showImg();
+			});
+			
+			
+			
+			//1. 当用户滑动滚动条到达400px,返回按钮显示,反之小于400px时隐藏
+			// 2.点击返回按钮时,滚动条恢复原位
+			// 让谁进行滚动
+			let goTop=document.getElementsByClassName('goTop')[0];
+			// 获取body或html距离,top:垂直方向,left水平方向
+			window.onscroll=function(){
+				let res=document.body.scrollTop||document.documentElement.scrollTop;
+				if (res>=400) {
+					goTop.style.display='block';
+				} else{
+					goTop.style.display='none';
+				}
+			}
+			goTop.onclick=function(){
+				document.body.scrollTop=0;
+				document.documentElement.scrollTop=0;
+			}
+			
+			
+			/*  基于准备好的dom，初始化echarts实例*/
+			var myChart = echarts.init(document.getElementById('main'));
+				
+			// 指定图表的配置项和数据
+			var option = {
+			    title: {
+			        text: '今日热卖销量'
+			    },
+			    tooltip: {},
+			    legend: {
+			        data:['销量']
+			    },
+			    xAxis: {
+			        data: ["皮皮虾","培根","娃娃菜","鲍鱼","鲈鱼","大闸蟹"]
+			    },
+			    yAxis: {},
+			    series: [{
+			        name: '销量',
+			        type: 'bar',
+			        data: [75, 70, 80, 90, 100, 90]
+			    }]
+			};
+				
+				
+			// 使用刚指定的配置项和数据显示图表。
+			myChart.setOption(option);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+/*实现个性化字体*/
+			@font-face {
+				/*定义个性字体名称*/
+				font-family: 'Glyphicons';
+				/*定义个性字体来源文件*/
+				src: url('fonts/glyphicons-regular.eot');	
+				src: url('fonts/glyphicons-regular.eot?#iefix') format('embedded-opentype'), 
+				url('fonts/glyphicons-regular.woff') format('woff'), 
+				url('fonts/glyphicons-regular.ttf') format('truetype'), 
+				url('fonts/glyphicons-regular.svg#glyphicons_halflingsregular') format('svg');		
+			}
+			.icon{
+				/*当前标签显示为单行块状元素*/
+				display: inline-block;
+				/*页面上的字体抗锯齿,使用后字体看起来会更清晰舒服,只适合Chrome和Safari浏览器*/
+ 				-webkit-font-smoothing: antialiased;
+ 				/*兼容firefox浏览器的字体抗锯齿*/
+				-moz-osx-font-smoothing: grayscale;
+ 				/*相对定位*/
+ 				position: relative;
+ 				/*从上向下偏移1px*/
+				top: 1px;
+				/*设置行高为1*/
+				line-height: 1;
+				/*字体宽度设为默认值*/
+				font-weight: normal;
+				/*字体样式设为默认值*/
+				font-style: normal;	
+			}
+			/*在当前元素上插入图标，显示商店图标*/
+			.icon-home:before {
+				/*使用个性字体Glyphicons*/
+				font-family: Glyphicons;
+				/*在当前元素上插入图标，其中\e021是字体的unicode编码*/
+				content: "\e021";					
+			}
+			
+			/*显示关于图标*/
+			.icon-vcard:before {	
+				font-family: Glyphicons;
+				content: "\e265";				
+			}
+			
+			/*显示社区图标*/
+			.icon-conversation:before {				
+				font-family: Glyphicons;
+				content: "\e245";				
+			}
+			
+			/*显示支持图标*/
+			.icon-settings:before {				
+				font-family: Glyphicons;
+				content: "\e288";				
+			}
