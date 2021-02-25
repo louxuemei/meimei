@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background: url(./img/bac.webp);
+			}
+			.wrap{
+				width: 760px;
+				height: 240px;
+				/* background: red; */
+				margin: 400px auto;
+				
+			}
+			.west{
+				width: 25%;
+				height: 100%;
+				float: left;
+				
+				
+			}
+			.west1{
+				background: url(./img/west_01.png)no-repeat;
+				background-position-x: 0px;
+				background-position-y: center;/* 垂直方向居中 */
+				/* 播放 绑定动画 名称 时间 脚步steps(步数):几人就几步  infinite:循环播放 */
+				animation: swk 1.4s steps(8) infinite;
+				/* 整个动画走1600px 走8步 每一步是200px 这一步是瞬间到达的 */
+			}
+			/* 关键帧动画,动画名称 */
+			@keyframes swk{
+				/* 动画开始 */
+				0%{
+					background-position-x:0px;
+				}
+				/* 动画结束 */
+				100%{
+					background-position-x: -1600px;
+				}
+			}
+			.west2{
+				background: url(./img/west_02.png)no-repeat;
+				background-position-x: 0px;
+				background-position-y: center;
+				/* 播放 绑定动画 名称 时间 脚步steps(步数):几人就几步  infinite:循环播放 */
+				animation: zbj 1.4s steps(8) infinite;
+			}
+			/* 关键帧动画,动画名称 */
+			@keyframes zbj{
+				/* 动画开始 */
+				0%{
+					background-position-x:0px;
+				}
+				/* 动画结束 */
+				100%{
+					background-position-x: -1600px;
+				}
+			}
+			.west3{
+				background: url(./img/west_03.png)no-repeat;
+				background-position-x: 0px;
+				background-position-y: center;
+				/* 播放 绑定动画 名称 时间 脚步steps(步数):几人就几步  infinite:循环播放 */
+				animation: ts 1.4s steps(8) infinite;
+			}
+			/* 关键帧动画,动画名称 */
+			@keyframes ts{
+				/* 动画开始 */
+				0%{
+					background-position-x:0px;
+				}
+				/* 动画结束 */
+				100%{
+					background-position-x: -1360px;
+				}
+			}
+			.west4{
+				background: url(./img/west_04.png)no-repeat;
+				background-position-x: 0px;
+				background-position-y: center;
+				/* 播放 绑定动画 名称 时间 脚步steps(步数):几人就几步  infinite:循环播放 */
+				animation: ss 1.4s steps(8) infinite;
+			}
+			/* 关键帧动画,动画名称 */
+			@keyframes ss{
+				/* 动画开始 */
+				0%{
+					background-position-x:0px;
+				}
+				/* 动画结束 */
+				100%{
+					background-position-x: -1680px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="west west1"></div>
+			<div class="west west2"></div>
+			<div class="west west3"></div>
+			<div class="west west4"></div>
+		</div>
+	</body>
+</html>

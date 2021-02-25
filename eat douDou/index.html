@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			body{
+				background-color: black;
+			}
+			.mouth{
+				width: 200px;
+				height: 200px;
+				/* background-color: aqua; */
+				margin-top: 100px;
+				border-radius: 100px 100px 100px 100px;
+				animation: peas 1s linear infinite;/* 播放动画 */				
+			}
+			/* 一个圆一分为二 */
+			.top,.bottom{
+				width: 200px;
+				height: 100px;
+				background-color: yellow;
+				margin-left: 150px;
+			}
+			.top{
+				border-radius: 100px 100px 0px 0px;
+				animation: mouthtop 1s linear infinite;/* 播放动画 */
+				
+			}
+			.bottom{
+				border-radius: 0px 0px 100px 100px;
+				transform: rotate(30deg);/* 变换/旋转 */
+				animation: mouthbottom 1s linear infinite;/* 播放动画 */
+				
+			}
+			@keyframes mouthtop{/* 关键帧(画面) 动画名称 */
+				0%{/* 动画开始 闭上 */
+					transform: rotate(0deg);
+				}
+				50%{/* 中间  张开*/
+					transform: rotate(-30deg);
+				}
+				100%{/* 结束 闭上*/
+					transform: rotate(0deg);
+				}
+			}
+			@keyframes mouthbottom{/* 关键帧(画面) 动画名称 */
+				0%{
+					transform: rotate(0deg);
+				}
+				50%{
+					transform: rotate(30deg);
+				}
+				100%{
+					transform: rotate(0deg);
+				}
+			}
+			@keyframes peas{
+				0%{
+					/* 盒子阴影 五个值： 横向变大 纵向变大 模糊 扩展 颜色*/
+					
+					box-shadow:
+					300px 0px 0px -80px red,
+					450px 0px 0px -80px red,
+					600px 0px 0px -80px red,
+					750px 0px 0px -80px red;
+				}
+				
+				100%{
+					/* 盒子阴影 五个值： 横向变大 纵向变大 模糊 扩展 颜色*/
+					
+					box-shadow:
+					150px 0px 0px -80px red,
+					350px 0px 0px -80px red,
+					450px 0px 0px -80px red,
+					600px 0px 0px -80px red;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="mouth">
+			<div class="top"></div>
+			<div class="bottom"></div>
+		</div>
+	</body>
+</html>
