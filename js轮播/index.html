@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		a{
+			text-decoration: none;
+			font-size: 14px;
+			color: black;
+		}
+		li {
+			list-style: none;
+		}
+		.myswiper,.content{
+			position: relative;
+			margin: 100px auto;
+			width: 780px;
+			height: 330px;
+		}
+		.content{
+			width: 780px;
+			height: 330px;
+			overflow: hidden;
+			background-color: red;
+		}
+		.swiper{
+			position: absolute;
+			top: 0;
+			width: 1000%;
+			height: 100%;
+			left: -100%;
+			transition: .3s;
+			background-color: red;
+		}
+	
+		.swiper li{
+			float: left;
+		}
+		.tab {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			background-color: rgba(142, 142, 142, 0.235);
+			height: 30px;
+		}
+		.tab ul{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			height: 30px;
+		}
+		.tab ul li{
+			flex: 1;
+			line-height: 30px;
+			text-align: center;
+		}
+		.tab ul li.on{
+			box-shadow: 0 0 5px 1px rgb(176, 176, 176) inset;
+			background-color: rgb(255, 255, 255);
+		}
+		.tab ul li.on a{
+			color: rgb(154, 111, 33);
+		}
+		.bot div{
+			position: absolute;
+			left: 0;
+			top: 45%;
+			width:28px;
+			height: 50px;
+			line-height: 50px;
+			font-size: 20px;
+			text-align: center;
+			transition: .3s;
+			color: rgba(255, 255, 255, 0.831);
+			background-color: rgba(0, 0, 0, 0.379);
+		}
+		.bot div:hover{
+			background-color: rgba(0, 0, 0, 0.579);			
+		}
+		.bot div.right{
+			left: 100%;
+			margin-left: -28px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- 轮播图容器s -->
+	<div class="myswiper">
+		<!-- 上层图片容器 -->
+		<div class="content">
+			<ul class="swiper">
+					<li>
+							<a href="">
+								<img src="./img/tb5.jpg" height="330" width="780" alt="">
+							</a>
+						</li>
+
+
+
+				<li>
+					<a href="">
+						<img src="./img/tb1.jpg" height="330" width="780" alt="">
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="./img/tb2.jpg" height="330" width="780" alt="">
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="./img/tb3.jpg" height="330" width="780" alt="">
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="./img/tb4.jpg" height="330" width="780" alt="">
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="./img/tb5.jpg" height="330" width="780" alt="">
+					</a>
+				</li>
+
+				<li>
+						<a href="">
+							<img src="./img/tb1.jpg" height="330" width="780" alt="">
+						</a>
+					</li>
+			</ul>
+		</div>
+		<!-- 底部tab区域 -->
+		<div class="tab">
+			<ul>
+				<li><a href="javascript:;">图片一</a></li>
+				<li><a href="javascript:;">图片二</a></li>
+				<li><a href="javascript:;">图片三</a></li>
+				<li><a href="javascript:;">图片四</a></li>
+				<li><a href="javascript:;">图片五</a></li>
+			</ul>
+		</div>
+		<!-- 左右点击按钮区域 -->
+		<div class="bot">
+			<div class="left"><</div>
+			<div class="right">></div>
+		</div>
+	</div>
+	<script>
+		// 获取元素
+		var ulBox = document.querySelector(".swiper"),
+		tabBot = document.querySelectorAll(".tab ul li"),
+		right = document.querySelector(".right"),
+		left = document.querySelector(".left"),
+		index = 0, //当前第几个
+		len = ulBox.children.length, // 图片的多少
+		timer = null; //定时器没用到
+
+		//右边点击事件
+		right.onclick = function(){
+			// 改变index
+			var nice = index
+			nice ++
+			change(nice)
+		}
+		//右边点击事件
+		left.onclick = function(){
+			// 改变index
+			change(index-1)			
+		}
+
+		//变化函数
+		function change(isn){
+			// 添加过渡
+			ulBox.style.transition = 0.3 + "s";
+			//改变ul的位置
+			ulBox.style.left = -isn - 1 + "00%"
+			//改变tab
+			if(isn > tabBot.length -1){
+				// 添加定时器，让ul在过渡时间内瞬间移动到初始位置
+				setTimeout(function(){
+					ulBox.style.transition = 0 + "s";
+                    ulBox.style.left = "-"+ 100 +"%";
+                },300);
+				isn = 0			
+			}else if(isn < 0){
+				setTimeout(function(){
+					ulBox.style.transition = 0 + "s";
+                    ulBox.style.left = -(len - 2) + "00%";
+                },300);
+				isn = tabBot.length -1			
+			}
+			
+			// 改变tab的点击按钮 index 是上一次点击的 isn谁当前点击的
+			tabBot[isn].classList.add("on")
+			tabBot[index].classList.remove("on")
+			//改变index 让他和当前的一样
+			index = isn
+		}
+
+		//按钮点击
+		// tabBot.forEach(function(item,index){
+		// 	item.onclick = function(){
+		// 		change(index)
+		// 	}
+		// })
+		var bb = 0
+		for(var i = 0;i<tabBot.length;i++){
+			tabBot[i].index = i
+			tabBot[i].onclick = function(){
+				change(this.index)
+			}
+		}
+
+	</script>
+</body>
+
+</html>
